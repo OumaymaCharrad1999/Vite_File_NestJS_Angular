@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="fr"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>créer un compte</title>
+    <meta name="generator" content="Nicepage 5.3.2, nicepage.com">
+    <meta name="referrer" content="origin">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "/assets/images/default-logo.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="créer un compte">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-image u-xl-mode" data-lang="fr" style="background-position: 50% 50%; background-image: url(&quot;/assets/images/2942529.jpg&quot;);"><header class="u-clearfix u-header u-white u-header" id="sec-d475"><div class="u-clearfix u-sheet u-sheet-1">      
+    <app-navbar></app-navbar>
+      </div></header>
+    <section class="u-align-center u-clearfix u-image u-shading u-section-1" id="sec-e119" data-image-width="2000" data-image-height="2000">
+      <div class="u-clearfix u-sheet u-valign-top u-sheet-1">
+        <div class="u-form u-form-1">
+          <form class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 15px;" source="email" name="form">
+            <div class="u-form-group u-form-name u-label-top">
+              <label for="name-5ba2" class="u-label">Nom complet de l'administrateur *</label>
+              <input type="text" placeholder="Nom complet de l'administrateur" id="name-5ba2" [(ngModel)] ="compte.nomAdmin" name="nom" class="u-border-4 u-border-palette-4-base u-input u-input-rectangle u-white" required="">
+            </div>
+            <div class="u-form-group u-label-top">
+              <label for="text-4770" class="u-label">CIN *</label>
+              <input type="text" placeholder="CIN de l'administrateur" id="text-4770" [(ngModel)] ="compte.cinAdmin"  name="text-1" class="u-border-4 u-border-palette-4-base u-input u-input-rectangle u-white" required="required">
+            </div>
+            <div class="u-form-group u-form-phone u-label-top">
+              <label for="phone-742b" class="u-label"> Téléphone *</label>
+              <input type="tel" placeholder="Telephone de l'administrateur (+216 00 000 000)" id="phone-742b" [(ngModel)] ="compte.telAdmin" name="phone" class="u-border-4 u-border-palette-4-base u-input u-input-rectangle u-white" required="">
+            </div>
+            <div class="u-form-email u-form-group u-label-top">
+              <label for="email-f28d" class="u-label">E-mail * </label>
+              <input type="email" placeholder="E-mail de l'administrateur" id="email-f28d" [(ngModel)] ="compte.emailAdmin" name="email-1" class="u-border-4 u-border-palette-4-base u-input u-input-rectangle u-white" required="">
+            </div>
+            <div class="u-border-3 u-border-palette-1-light-2 u-form-group u-form-line u-line u-line-horizontal u-line-1"></div>
+            <div class="u-form-group u-form-name u-label-top">
+              <label for="name-6797" class="u-label">Nom de l'entreprise *</label>
+              <input type="text" placeholder="Nom de l'entreprise" id="name-6797" [(ngModel)] ="compte.nomEntreprise" name="name"  class="u-border-4 u-border-palette-4-base u-input u-input-rectangle u-white" required="">
+            </div>
+            <div class="u-form-group u-label-top">
+              <label for="text-2edd" class="u-label">Immatriculation fiscale *</label>
+              <input type="text" placeholder="Immatriculation fiscale" id="text-2edd" [(ngModel)] ="compte.immatFiscale" name="text"  class="u-border-4 u-border-palette-4-base u-input u-input-rectangle u-white" required="required">
+            </div>
+            <div class="u-form-address u-form-group u-label-top u-form-group-8">
+              <label for="address-34f9" class="u-label">mot de passe</label>
+              <input type="password" placeholder="mot de passe" id="address-34f9" [(ngModel)] ="mdp" name="address"  class="u-border-4 u-border-palette-4-base u-input u-input-rectangle u-white" required="">
+            </div>
+            <div class="u-form-address u-form-group u-label-top u-form-group-8">
+              <label for="address-34f9" class="u-label">confirmer le mot de passe</label>
+              <input type="password" placeholder="confirmer le mot de passe" id="address-34f9" [(ngModel)] ="confirmMdp" name="address"  class="u-border-4 u-border-palette-4-base u-input u-input-rectangle u-white" required="">
+            </div>
+
+            <div class="u-form-address u-form-group u-label-top u-form-group-8">
+              <label *ngIf="!mdpConfirmed" class="u-label" style="color: brown;">Mots de passe non conformes!!</label>
+            </div>
+
+            <button type="button" class="btn btn-primary" (click)="onClickSubmit()">Soumettre</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+  
+</body></html>
