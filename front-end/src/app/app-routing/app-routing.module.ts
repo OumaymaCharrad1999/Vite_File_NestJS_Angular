@@ -37,7 +37,7 @@ export const appRouteList: Routes = [
     component: NewAccountComponent
   },
   {
-    path: 'ajouter-file',
+    path: 'ajouter-file/:token/:email/:password',
     component: AjouterFileComponent
   },
   {
@@ -45,7 +45,7 @@ export const appRouteList: Routes = [
     component: AjoutEchoueComponent
   },
   {
-    path: 'modifier-file',
+    path: 'modifier-file/:token/:email/:password',
     component: ModifierFileComponent
   },
   {

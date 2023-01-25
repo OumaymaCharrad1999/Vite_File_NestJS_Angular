@@ -37,8 +37,9 @@ async updateFile(updatefile:Partial<FileEntity>):Promise<FileEntity> {
 
 const Id=updatefile.Id
   const new_file= await this.FileRepository.findOne({where:{Id}});
+  console.log(new_file)
   if (new_file){
-    Object.assign(new_file, updatefile);
+    new_file.Adress  = updatefile.Adress;
     return await this.FileRepository.save(new_file);
   }
   else {

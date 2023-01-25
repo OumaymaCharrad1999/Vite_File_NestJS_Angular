@@ -60,7 +60,8 @@ export class ApiServiceService {
   }
 
   public updateFile(file : fileModel){
-    return this.httpClient.patch<fileModel>(`${this.API_SERVER}/files/update`,{"Id":file.idFile,
+    console.log(file)
+    return this.httpClient.patch<any>(`${this.API_SERVER}/files/update`,{"Id":file.idFile,
                                                                                 "Adress":file.adresseFile});
   }
 

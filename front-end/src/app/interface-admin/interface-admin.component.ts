@@ -19,17 +19,19 @@ export class InterfaceAdminComponent implements OnInit {
 
   fileList!:any[]
   account:any
-
-  
+  token!:string
+  email!:string
+  mdp!:string
 
   async ngOnInit(): Promise<void> {
-    let token =  this.route.snapshot.paramMap.get('token') ;
-    let email = this.route.snapshot.paramMap.get('email')! ;
-    let mdp = this.route.snapshot.paramMap.get('password')! ;
+     this.token =  this.route.snapshot.paramMap.get('token')! ;
+     this.email = this.route.snapshot.paramMap.get('email')! ;
+     this.mdp = this.route.snapshot.paramMap.get('password')! ;
 
-    if(token){
+    if(this.token){
 
-      this.account = await firstValueFrom(this.myService.getAccount(email,mdp).pipe(timeout(10000)));
+
+      this.account = await firstValueFrom(this.myService.getAccount(this.email,this.mdp).pipe(timeout(10000)));
 
       console.log(await firstValueFrom(this.myService.getFiles(this.account.id).pipe(timeout(10000))))
 
@@ -45,10 +47,13 @@ export class InterfaceAdminComponent implements OnInit {
    else{
     this.router.navigateByUrl(`admin-non-authentifie`)
     }
-     
-
-    
-    
   }
 
+  submitAjouter(){
+    this.router.navigateByUrl(`ajouter-file/${this.token}/${this.email}/${this.mdp}`)
+  }
+
+  submitModifier(){
+    this.router.navigateByUrl(`modifier-file/${this.token}/${this.email}/${this.mdp}`)
+  }
 }
