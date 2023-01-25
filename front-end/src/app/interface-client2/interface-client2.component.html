@@ -28,9 +28,11 @@
           <div class="u-container-layout u-container-layout-1">
             <div class="u-border-3 u-border-grey-dark-1 u-shape u-shape-right u-shape-1"></div>
             <div class="u-border-3 u-border-grey-dark-1 u-shape u-shape-left u-shape-2"></div>
-            <h1 class="u-text u-text-default u-text-1">A-49</h1>
-            <a href="https://nicepage.com/c/architecture-building-website-templates" class="u-border-2 u-border-grey-75 u-btn u-button-style u-gradient u-none u-text-body-alt-color u-btn-1">Mettre a jour</a>
-          </div>
+            <h1 class="u-text u-text-default u-text-1">{{etatFile.guichet}}-{{etatFile.numerofile}}</h1>
+            <a  class="u-border-2 u-border-grey-75 u-btn u-button-style u-gradient u-none u-text-body-alt-color u-btn-1">
+              <button style="background: transparent;border: none;" (click)="onClickSubmit()">Mettre à jour</button>></a>
+        
+            </div>
         </div>
       </div>
     </section>

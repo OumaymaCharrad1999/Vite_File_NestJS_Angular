@@ -57,7 +57,7 @@ export const appRouteList: Routes = [
     component: InterfaceClientComponent
   },
   {
-    path: 'client2',
+    path: 'client2/:idFile',
     component: InterfaceClient2Component
   },
   {

@@ -41,13 +41,13 @@
                   <br><br>
                   <div *ngIf ="serviceChoisi" >
                   <p>Choisissons le local de ce service :</p>
-                  <select class="form-select" id="sel1"  name="sellist1" >
-                    <option *ngFor = "let service of serviceList">{{service.compagny}}</option>
+                  <select class="form-select" id="sel1" (ngModelChange)="onChange2($event)" [(ngModel)]=fileChoisie name="sellist2">
+                    <option *ngFor = "let file of fileList" (value)="file.Adress">{{file.Adress}}</option>
                   </select>
                 </div>
                   <br><br>
 
-                  <button type="button" class="btn btn-primary btn-lg" style="background-color: palevioletred">Large button</button>
+                  <button type="button" class="btn btn-primary btn-lg" style="background-color: palevioletred" (click)="onClickSubmit()">Large button</button>
                   
                 </form>
               </div>
